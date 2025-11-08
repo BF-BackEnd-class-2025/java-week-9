@@ -37,7 +37,7 @@ We will test the API by sending HTTP requests.
 ### ✅ **Endpoint 1: Get All Students**
 
 | Method | URL                                  |
-| ------ | ------------------------------------ |
+|--------|--------------------------------------|
 | GET    | `http://localhost:8080/api/students` |
 
 Expected Response (empty list first time):
@@ -51,7 +51,7 @@ Expected Response (empty list first time):
 ### ✅ **Endpoint 2: Add a Student**
 
 | Method | URL                                  |
-| ------ | ------------------------------------ |
+|--------|--------------------------------------|
 | POST   | `http://localhost:8080/api/students` |
 
 Select:
@@ -92,16 +92,16 @@ SELECT * FROM students;
 
 You should now see:
 
-| id  | name | age | email                               |
-| --- | ---- | --- | ----------------------------------- |
-| 1   | Sam  | 25  | [sam@mail.com](mailto:sam@mail.com) |
+| id | name | age | email                               |
+|----|------|-----|-------------------------------------|
+| 1  | Sam  | 25  | [sam@mail.com](mailto:sam@mail.com) |
 
 ---
 
 ### ✅ **Endpoint 3: Get Student by ID**
 
 | Method | URL                                    |
-| ------ | -------------------------------------- |
+|--------|----------------------------------------|
 | GET    | `http://localhost:8080/api/students/1` |
 
 Expected:
@@ -120,7 +120,7 @@ Expected:
 ### ✅ **Endpoint 4: Update Student**
 
 | Method | URL                                    |
-| ------ | -------------------------------------- |
+|--------|----------------------------------------|
 | PUT    | `http://localhost:8080/api/students/1` |
 
 Body:
@@ -142,7 +142,7 @@ Expected Response:
 ### ✅ **Endpoint 5: Delete Student**
 
 | Method | URL                                    |
-| ------ | -------------------------------------- |
+|--------|----------------------------------------|
 | DELETE | `http://localhost:8080/api/students/1` |
 
 After sending, check DB again:
@@ -158,7 +158,7 @@ SELECT * FROM students;
 ## 🧠 Common Testing Mistakes & Fixes
 
 | Issue                               | Explanation              | Fix                                           |
-| ----------------------------------- | ------------------------ | --------------------------------------------- |
+|-------------------------------------|--------------------------|-----------------------------------------------|
 | `415 Unsupported Media Type`        | Postman didn't send JSON | Select **raw → JSON**                         |
 | `404 Not Found`                     | URL incorrect            | Check controller `@RequestMapping` path       |
 | `org.postgresql.util.PSQLException` | Wrong DB password        | Fix in `application.properties`               |
@@ -168,8 +168,8 @@ SELECT * FROM students;
 
 ## 🎯 Testing Is Successful When
 
-✔ Endpoints return correct JSON
-✔ Database updates after POST/PUT/DELETE
-✔ No errors appear in logs
+- ✔ Endpoints return correct JSON
+- ✔ Database updates after POST/PUT/DELETE
+- ✔ No errors appear in logs
 
 ---

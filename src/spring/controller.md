@@ -154,7 +154,7 @@ public class StudentController {
 ## 5. API Endpoints Summary
 
 | Method   | Endpoint             | Description           |
-| -------- | -------------------- | --------------------- |
+|----------|----------------------|-----------------------|
 | `GET`    | `/api/students`      | Get all students      |
 | `GET`    | `/api/students/{id}` | Get one student by ID |
 | `POST`   | `/api/students`      | Create a student      |
