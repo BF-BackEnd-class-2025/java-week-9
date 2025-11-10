@@ -76,7 +76,7 @@ public class Book {
 ## 🧠 Common Validation Annotations
 
 | Annotation               | Applies To          | Description                       |
-| ------------------------ | ------------------- | --------------------------------- |
+|--------------------------|---------------------|-----------------------------------|
 | `@NotNull`               | Any type            | Must not be null                  |
 | `@NotBlank`              | String              | Must not be empty or whitespace   |
 | `@NotEmpty`              | String, Collections | Must not be null or empty         |
@@ -101,16 +101,19 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/books")
-public class BookController {
+public class BookController 
+{
 
     private final BookService service;
 
-    public BookController(BookService service) {
+    public BookController(BookService service) 
+    {
         this.service = service;
     }
 
     @PostMapping
-    public Book addBook(@Valid @RequestBody Book book) {
+    public Book addBook(@Valid @RequestBody Book book) 
+    {
         return service.saveBook(book);
     }
 }
@@ -155,7 +158,7 @@ public class BookController {
 ## ✅ Summary
 
 | Feature                            | Purpose                            |
-| ---------------------------------- | ---------------------------------- |
+|------------------------------------|------------------------------------|
 | `spring-boot-starter-validation`   | Enables input validation           |
 | `@Valid`                           | Triggers validation in controllers |
 | `jakarta.validation.constraints.*` | Provides validation annotations    |
